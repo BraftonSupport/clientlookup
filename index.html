@@ -1,0 +1,39 @@
+﻿<html>
+  <head>
+    <title>Account and Feed Information</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="node_modules/@angular2-material/core/overlay/overlay.css" rel="stylesheet">
+    <link href="node_modules/@angular2-material/button/button.css" rel="stylesheet"/>
+    <link href="node_modules/@angular2-material/card/card.css" rel="stylesheet"/>
+    <link href="node_modules/@angular2-material/list/list.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/appstyles.css"/>
+
+    <!-- Latest patch release (recommended for production) -->
+    <script src="http://cdn.auth0.com/js/lock/10.1.0/lock.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>
+        <div class="col-sm-4 col-sm-offset-4">
+            <i class="fa fa-spinner fa-spin fa-4x"></i>
+        </div>
+    </my-app>
+  </body>
+</html>

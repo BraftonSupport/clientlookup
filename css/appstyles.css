@@ -1,0 +1,36 @@
+md-input{
+    width:75%;
+}
+md-card:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.md-list-item{
+    background:#eeeeee;
+}
+.md-list-item:hover {
+    outline: none;
+    background:#cccccc;
+    cursor:pointer;
+    }
+.text-danger{
+    border-left: 5px solid #a94442;
+    padding-left: 15px;
+}
+.navbar-brand{
+    background:transparent;
+
+}
+.active{
+    background:transparent;
+    color:#FFFFFF !important;
+}
+.auth0-lock-header-bg.auth0-lock-blur-support {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+div.auth0-lock-name {
+   
+    color: #FFFFFF !important;
+}

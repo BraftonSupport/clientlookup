@@ -1,0 +1,51 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand active">Account Information</a>
+            <a class="navbar-brand">Menu</a>
+            <a class="navbar-brand" (click)="logout()">Log Out</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+<div class="container" style="clear:both;margin-top:75px;">
+    <div class="row">
+        <div class="col-sm-6">
+            <md-card>
+                    <md-card-title>Get Client Information</md-card-title>
+                
+                    <form class="form">
+                        <div class="form-group">
+                            <md-input let apiKey type="text" name="apiKey" [(ngModel)]="FormData.apiKey" >
+                                <md-hint align="end">API Key or FeedId</md-hint>
+                            </md-input>
+                        </div>
+                    <br/>
+                    <div class="form-group" style="width:75%">
+                        <label for="brand">Brand</label>
+                        <select class="form-control" [(ngModel)]="FormData.brand" name="brand">
+                            <option *ngFor="let option of options" [value]="option.value">{{option.name}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="width:75%">
+                        <md-checkbox [(ngModel)]="FormData.reqeustRawData"  (change)="FormData.requestRawData = true" name="rawData">
+                            Raw Data
+                        </md-checkbox>
+                    </div>
+                    <br/>
+                    <span md-raised-button class="md-primary" (click)="findAccount()">Get Feed info</span>
+                        
+                    </form>
+            </md-card>
+            
+        </div>
+        <loader *ngIf="isLoadingInfo"></loader>
+        <display-errors *ngIf="requestFailed" [raw]="rawData"></display-errors>
+        <list-clients></list-clients>
+        <display-client [hidden]="!clientLoaded" [keyArray]="keyArray" [client]="client"></display-client>
+        <display-rawdata *ngIf="FormData.reqeustRawData && clientLoaded" [raw]="rawData"></display-rawdata>
+    </div>
+</div>
