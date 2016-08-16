@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class braftonApiService {
-    private _baseUrl: string = "http://localhost/braftonCoreApi/";
+    private _baseUrl: string = "api/index.php";
 
     constructor(private _http: Http) {
 

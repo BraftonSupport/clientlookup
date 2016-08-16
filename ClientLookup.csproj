@@ -119,6 +119,8 @@
     <Content Include="typings\globals\jasmine\typings.json" />
     <Content Include="typings\globals\node\typings.json" />
     <Content Include="typings\globals\selenium-webdriver\typings.json" />
+    <Content Include="api\braftoncore.php" />
+    <Content Include="api\index.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
